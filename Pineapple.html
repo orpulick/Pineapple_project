@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pineapple</title>
+    <style>
+      body {
+        background: linear-gradient(
+          114.2deg,
+          rgb(121, 194, 243) 22.6%,
+          rgb(255, 180, 239) 67.7%
+        );
+      }
+      h1 {
+        color: white;
+        text-align: center;
+        font-family: Verdana, sans-serif;
+        border: 3px solid;
+        border-color: white;
+        border-radius: 4px;
+        padding: 20px;
+      }
+      h2 {
+        font-weight: 500;
+        font-family: Verdana, sans-serif;
+        color: white;
+        text-align: center;
+        line-height: 25px;
+        padding: 10px;
+        font-size: 18px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 80%;
+        border-radius: 10px;
+      }
+      p {
+        color: white;
+        font-family: Verdana, sans-serif;
+        line-height: 1.5;
+        font-size: 15px;
+        margin: 20px 0 10px;
+      }
+
+      button {
+        font-family: Verdana, sans-serif;
+        display: block;
+        margin: 20px auto;
+        background-color: #ca0f62;
+        color: white;
+        font-size: 18px;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+      .learnMore {
+        display: block;
+        margin-top: 20px;
+        text-decoration: none;
+        color: #ca0f62;
+        font-size: 13px;
+      }
+      .learnMore:hover {
+        text-decoration: underline;
+      }
+      .footer {
+        font-family: Verdana, sans-serif;
+        text-align: center;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px 60px;
+      }
+      .tropical {
+        color: #4e2d8f;
+      }
+      a {
+        font-family: Verdana, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>I Love Pineapples!</h1>
+      <h2>
+        "Love is like a pineapple, sweet and undefinable." <br />
+        - Piet Hein
+      </h2>
+
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/031/749/original/874355.png?1649869332"
+        alt="Pineapple"
+        width="300"
+      />
+      <p>
+        The pineapple is a tropical plant with an edible fruit; it is the most
+        economically significant plant in the family
+        <span class="tropical"><em>Bromeliaceae</em></span
+        >. The pineapple is indigenous to South America, where it has been
+        cultivated for many centuries.
+      </p>
+      <hr />
+      <a
+        href="https://en.wikipedia.org/wiki/Pineapple"
+        target="_blank"
+        class="learnMore"
+      >
+        Learn more on Wikipedia</a
+      >
+      <button class="buy-button">Pineapple Party Invite!</button>
+      <p class="footer">
+        This page was built by <strong>Olivia Pulick</strong>
+      </p>
+    </div>
+    <script>
+      function invite() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        let age = prompt("how old are you?");
+
+        if (age >= 16) {
+          alert(
+            "Thank you " +
+              name +
+              "! We'll be in touch by email meanwhile eat a lots of 🍍's"
+          );
+        } else {
+          alert(
+            "Thank you " +
+              name +
+              "! Sorry to inform you that we cannot extend an invitation to you at this time."
+          );
+        }
+      }
+      let buyButton = document.querySelector(".buy-button");
+      buyButton.addEventListener("click", invite);
+    </script>
+  </body>
+</html>
